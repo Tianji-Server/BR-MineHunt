@@ -245,7 +245,6 @@ public class GameStartedModule extends AbstractGameModule implements GameModule,
                 Bukkit.broadcast(plugin.text("started.force-joined", sender.getName(), target.getName(), targetRole.getComponent(), teammate.getName()));
             }
             case "howtoplay" -> player.sendMessage(plugin.text("general.how-to-play"));
-            case "codusk" -> player.sendMessage(ChatColor.GOLD + "鱼头，小片三呢？");
             case "help" ->
                     player.sendMessage(plugin.text("general.available-commands", "/minehunt howtoplay, /minehunt spectate", "/minehunt codusk", "/minehunt forcejoin", "/minehunt invsee"));
             default -> player.sendMessage(plugin.text("general.invalid-command"));

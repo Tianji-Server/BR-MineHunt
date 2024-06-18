@@ -221,6 +221,6 @@ public final class BR_MineHunt extends JavaPlugin implements Listener, @NotNull 
 
     @Override
     public void onPluginMessageReceived(@NotNull String channel, @NotNull Player player, @NotNull byte[] message) {
-        player.sendMessage(ChatColor.RED+""+ChatColor.BOLD+"检测到您已安装 JourneyMap，请手动关闭 JournalMap 的生物雷达。MineHunt 中使用生物雷达和洞穴地图将被视为作弊，并会导致账号封禁");
+        player.sendMessage(ChatColor.RED+""+ChatColor.BOLD+"检测到您已安装 JourneyMap，请手动关闭 JournalMap 的生物雷达。MineHunt 中使用生物雷达和洞穴地图将被视为作弊。");
     }
 }
