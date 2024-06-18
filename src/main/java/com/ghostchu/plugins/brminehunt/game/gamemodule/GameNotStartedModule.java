@@ -352,7 +352,7 @@ public class GameNotStartedModule extends AbstractGameModule implements GameModu
             }
             case "howtoplay" -> player.sendMessage(plugin.text("general.how-to-play"));
             case "help" ->
-                    player.sendMessage(plugin.text("general.available-commands", "/minehunt howtoplay, /minehunt spectate", "/minehunt codusk"));
+                    player.sendMessage(plugin.text("general.available-commands", "/minehunt howtoplay, /minehunt spectate"));
             default -> player.sendMessage(plugin.text("general.invalid-command"));
         }
         return true;
@@ -360,7 +360,7 @@ public class GameNotStartedModule extends AbstractGameModule implements GameModu
 
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        List<String> list = new ArrayList<>(List.of("spectate", "howtoplay", "codusk", "help"));
+        List<String> list = new ArrayList<>(List.of("spectate", "howtoplay", "help"));
         if (sender.hasPermission("minehunt.admin.start"))
             list.add("start");
         if (sender.hasPermission("minehunt.admin.shuffle"))

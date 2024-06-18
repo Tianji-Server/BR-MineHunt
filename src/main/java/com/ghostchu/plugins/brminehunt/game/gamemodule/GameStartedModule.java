@@ -194,7 +194,7 @@ public class GameStartedModule extends AbstractGameModule implements GameModule,
 
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        List<String> list = new ArrayList<>(List.of("spectate", "howtoplay", "invsee", "codusk", "help"));
+        List<String> list = new ArrayList<>(List.of("spectate", "howtoplay", "invsee",  "help"));
         if (sender.hasPermission("minehunt.admin.forcejoin"))
             list.add("forcejoin");
         return list;
@@ -246,7 +246,7 @@ public class GameStartedModule extends AbstractGameModule implements GameModule,
             }
             case "howtoplay" -> player.sendMessage(plugin.text("general.how-to-play"));
             case "help" ->
-                    player.sendMessage(plugin.text("general.available-commands", "/minehunt howtoplay, /minehunt spectate", "/minehunt codusk", "/minehunt forcejoin", "/minehunt invsee"));
+                    player.sendMessage(plugin.text("general.available-commands", "/minehunt howtoplay, /minehunt spectate", "/minehunt forcejoin", "/minehunt invsee"));
             default -> player.sendMessage(plugin.text("general.invalid-command"));
         }
         return true;
